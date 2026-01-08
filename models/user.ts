@@ -63,23 +63,23 @@ export interface User {
   id: string;
   name: string;
   subTitle: string;
-  avatar: string;
+  avatar: string | undefined;
   sections: Section<any>[];
 }
 
 
 export const exampleUser: User = {
   id: "user-1",
-  name: "Gingy",
-  subTitle: "Systems Analyst",
-  avatar: "/avatar.png",
+  name: "Ariel Solla",
+  subTitle: "Analista de sistemas - Desarrollador Frontend",
+  avatar: undefined,
   sections: [
     {
       id: "about",
       label: "About",
       visible: true,
-      data: "Soy desarrolladora web enfocada en la creación de aplicaciones modernas e interactivas. Me interesa construir interfaces claras, eficientes y bien estructuradas, combinando diseño y lógica para desarrollar productos funcionales. Disfruto trabajar en proyectos donde puedo aplicar y seguir mejorando mis habilidades, aprendiendo nuevas tecnologías y cuidando siempre la experiencia del usuario."
-    },
+      data: "Soy graduado en Análisis de Sistemas y desarrollador front-end, enfocado en crear aplicaciones web interactivas y bien estructuradas. Me gusta combinar diseño y lógica para construir productos funcionales para la experiencia del usuario, siempre aprendiendo nuevas tecnologías y mejorando mis habilidades."
+   },
     {
       id: "projects",
       label: "Projects",
@@ -88,7 +88,7 @@ export const exampleUser: User = {
         type: "links",
         links: [
           {
-            id: 1,
+            id: "1",
             icon: "/pokeIcon.png",
             slug: "poke-catch",
             title: "Poke Catch",
@@ -104,14 +104,14 @@ export const exampleUser: User = {
             },
           },
           {
-            id: 2,
+            id: "2",
             icon: "/placeholder.webp",
             slug: "portfolio-personal",
             title: "Portfolio personal ",
             subtitle: "Portfolio web interactivo",
             description: "Este proyecto es mi portfolio personal desarrollado como una aplicación web interactiva. La idea principal no es solo mostrar información estática, sino permitir la edición y gestión de mi contenido directamente desde la interfaz: agregar, modificar o eliminar proyectos, secciones y datos personales. Incluye soporte para múltiples idiomas, modo claro/oscuro y una estructura modular que me permite actualizar el portfolio de forma flexible. El objetivo es mostrar mis trabajos mientras demuestro mis habilidades en desarrollo frontend, lógica de aplicación y construcción de interfaces dinámicas.",
             year: "2025",
-            link: "#",
+            link: "https://portfolio-arielsolla.vercel.app/",
             cover: "/portf.png",
             tools: {
               frontend: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
@@ -178,12 +178,44 @@ export const exampleUser: User = {
       visible: true,
       data: [
         {
-          id:1,
+          id:"1",
+          start: "2016",
+          end: "2020",
+          title: "Asistente de ventas | LGI S.A.",
+          workType: "Office",
+          description: "Apoyo en atención al cliente, preparación de pedidos y gestión de entregas y cobranzas.",
+        },
+        {
+          id:"2",
+          start: "2020",
+          end: "2021",
+          title: "Manejo de plataforma Ecommerce",
+          workType: "Remote",
+          description: "Subida y gestión de productos en 'Electronic Things', incluyendo imágenes, precios y detalles de cada artículo."
+        },
+        {
+          id:"3",
+          start: "2021",
+          end: "2021",
+          title: "Servicio técnico Streaming Festival Borges 2021",
+          workType: "Remote",
+          description: "Coordinación y transmisión de charlas en YouTube con StreamYard, creación de HUDs y carteles para los streams, y control técnico general.",
+        },
+        {
+          id:"4",
           start: "2022",
           end: "2023",
-          title: "Frontend Developer",
+          title: "Vendedor independiente en Mercado Libre",
           workType: "Remote",
-          description: "Desarrollo de interfaces web con React y Tailwind.",
+          description: "Gestión y publicación de productos en Mercado Libre, incluyendo imágenes, precios y descripciones.",
+        },
+        {
+          id:"5",
+          start: "2023",
+          end: "Present",
+          title: "Desarrollador FrontEnd | RTI Latina",
+          workType: "Hybrid",
+          description: "Desarrollo y diseño de aplicaciones e interfaces con React.js y Java, incluyendo mantenimiento y revisión de código.",
         },
       ],
     },
@@ -193,32 +225,25 @@ export const exampleUser: User = {
       visible: true,
       data: [
         {
-          id:1,
-          icon: "github",
-          mediaName: "GitHub",
-          nickName: "Gingy",
-          link: "https://github.com/Gingy-Geek",
-        },
-        {
-          id:2,
-          icon: "instagram",
-          mediaName: "Instagram",
-          nickName: "Nahir M. S.",
-          link: "https://instagram.com/",
-        },
-        {
-          id:3,
-          icon: "gmail",
-          mediaName: "Gmail",
-          nickName: "arggingerg96@gmail.com",
-          link: "mailto:arggingerg96@gmail.com",
-        },
-        {
-          id:4,
+          id:"1",
           icon: "linkedin",
           mediaName: "LinkedIn",
-          nickName: "Nahir M. S.",
-          link: "https://linkedin.com",
+          nickName: "Ariel Solla",
+          link: "https://www.linkedin.com/in/ariel-solla/",
+        },
+        {
+          id:"2",
+          icon: "github",
+          mediaName: "GitHub",
+          nickName: "Ariel-ns96",
+          link: "https://github.com/Ariel-ns96",
+        },
+        {
+          id:"3",
+          icon: "gmail",
+          mediaName: "Gmail",
+          nickName: "ariel.solla96@gmail.com",
+          link: "mailto:ariel.solla96@gmail.com",
         },
       ],
     },
